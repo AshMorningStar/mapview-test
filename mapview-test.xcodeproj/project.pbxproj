@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		5E7C89B11CD864F700342EFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89B01CD864F700342EFC /* AppDelegate.swift */; };
 		5E7C89B31CD864F700342EFC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89B21CD864F700342EFC /* FirstViewController.swift */; };
-		5E7C89B51CD864F700342EFC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89B41CD864F700342EFC /* SecondViewController.swift */; };
+		5E7C89B51CD864F700342EFC /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89B41CD864F700342EFC /* LocationVC.swift */; };
 		5E7C89B81CD864F700342EFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7C89B61CD864F700342EFC /* Main.storyboard */; };
 		5E7C89BA1CD864F700342EFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7C89B91CD864F700342EFC /* Assets.xcassets */; };
 		5E7C89BD1CD864F700342EFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7C89BB1CD864F700342EFC /* LaunchScreen.storyboard */; };
+		5E7C89C51CD8967000342EFC /* ParkingLotAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89C41CD8967000342EFC /* ParkingLotAnnotation.swift */; };
+		5EA480281CD98F3F00C22771 /* ShoppingMallAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA480271CD98F3F00C22771 /* ShoppingMallAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E7C89AD1CD864F700342EFC /* mapview-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mapview-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7C89B01CD864F700342EFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7C89B21CD864F700342EFC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		5E7C89B41CD864F700342EFC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5E7C89B41CD864F700342EFC /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		5E7C89B71CD864F700342EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E7C89B91CD864F700342EFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E7C89BC1CD864F700342EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E7C89BE1CD864F700342EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E7C89C41CD8967000342EFC /* ParkingLotAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingLotAnnotation.swift; sourceTree = "<group>"; };
+		5EA480271CD98F3F00C22771 /* ShoppingMallAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingMallAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				5E7C89B01CD864F700342EFC /* AppDelegate.swift */,
 				5E7C89B21CD864F700342EFC /* FirstViewController.swift */,
-				5E7C89B41CD864F700342EFC /* SecondViewController.swift */,
+				5E7C89B41CD864F700342EFC /* LocationVC.swift */,
 				5E7C89B61CD864F700342EFC /* Main.storyboard */,
 				5E7C89B91CD864F700342EFC /* Assets.xcassets */,
 				5E7C89BB1CD864F700342EFC /* LaunchScreen.storyboard */,
 				5E7C89BE1CD864F700342EFC /* Info.plist */,
+				5E7C89C41CD8967000342EFC /* ParkingLotAnnotation.swift */,
+				5EA480271CD98F3F00C22771 /* ShoppingMallAnnotation.swift */,
 			);
 			path = "mapview-test";
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7C89B51CD864F700342EFC /* SecondViewController.swift in Sources */,
+				5E7C89B51CD864F700342EFC /* LocationVC.swift in Sources */,
 				5E7C89B11CD864F700342EFC /* AppDelegate.swift in Sources */,
 				5E7C89B31CD864F700342EFC /* FirstViewController.swift in Sources */,
+				5EA480281CD98F3F00C22771 /* ShoppingMallAnnotation.swift in Sources */,
+				5E7C89C51CD8967000342EFC /* ParkingLotAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +298,7 @@
 				5E7C89C31CD864F700342EFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

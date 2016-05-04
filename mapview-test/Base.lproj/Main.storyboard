@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="mapview_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -47,7 +48,7 @@
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="LocationVC" customModule="mapview_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -69,16 +70,65 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XUP-gT-eGj">
+                                <rect key="frame" x="0.0" y="279" width="600" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Bmu-ZK-zyj"/>
+                                    <constraint firstAttribute="height" constant="272" id="Cl3-0P-VNt"/>
+                                    <constraint firstAttribute="height" constant="272" id="t8o-Yy-dgd"/>
+                                    <constraint firstAttribute="width" constant="600" id="uaf-Lg-pil"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Cl3-0P-VNt"/>
+                                        <exclude reference="uaf-Lg-pil"/>
+                                    </mask>
+                                </variation>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="85w-1J-naT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="271" id="N8C-Jc-tk7"/>
+                                    <constraint firstAttribute="width" constant="600" id="lkz-3D-VsN"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="85w-1J-naT" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="6x0-E7-PY3"/>
+                            <constraint firstAttribute="trailing" secondItem="XUP-gT-eGj" secondAttribute="trailing" id="AdQ-St-ERX"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
+                            <constraint firstItem="85w-1J-naT" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="ECd-2l-UzV"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
+                            <constraint firstItem="XUP-gT-eGj" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="QXO-1F-NJb"/>
+                            <constraint firstItem="XUP-gT-eGj" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="V9R-F7-NCJ"/>
+                            <constraint firstItem="XUP-gT-eGj" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="VY9-Kj-BvS"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="XUP-gT-eGj" secondAttribute="bottom" id="ZqH-bT-2oz"/>
+                            <constraint firstAttribute="trailing" secondItem="XUP-gT-eGj" secondAttribute="trailing" id="bSd-qW-6xQ"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="XUP-gT-eGj" secondAttribute="bottom" id="odA-Eq-HOZ"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="trailing" secondItem="85w-1J-naT" secondAttribute="trailing" id="vKM-ia-O5n"/>
+                            <constraint firstAttribute="trailing" secondItem="XUP-gT-eGj" secondAttribute="trailing" id="wL5-AD-m2X"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="XUP-gT-eGj" secondAttribute="bottom" id="ykF-5a-RjA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QXO-1F-NJb"/>
+                                <exclude reference="V9R-F7-NCJ"/>
+                                <exclude reference="bSd-qW-6xQ"/>
+                                <exclude reference="wL5-AD-m2X"/>
+                                <exclude reference="ZqH-bT-2oz"/>
+                                <exclude reference="ykF-5a-RjA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="mapView" destination="85w-1J-naT" id="KhZ-2O-de0"/>
+                        <outlet property="tableView" destination="XUP-gT-eGj" id="WH8-xU-sxi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
